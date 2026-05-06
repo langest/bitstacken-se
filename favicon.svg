@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title>Bitstacken AB</title>
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f7b72" />
+      <stop offset="100%" stop-color="#182126" />
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="18" fill="url(#g)" />
+  <path
+    d="M21 16h14c8 0 13 4 13 11 0 5-3 8-7 9 5 1 9 5 9 11 0 8-6 13-15 13H21V16Zm13 17c4 0 7-2 7-6s-3-5-7-5h-6v11h6Zm1 21c5 0 8-2 8-7 0-4-3-7-8-7h-7v14h7Z"
+    fill="#f8f4ec"
+  />
+</svg>
