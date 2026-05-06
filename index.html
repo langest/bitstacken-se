@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bitstacken AB | IT Consulting</title>
+    <meta
+      name="description"
+      content="Bitstacken AB provides practical IT consulting, websites, apps, and technical support for businesses."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Sora:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <div class="frame">
+        <header class="masthead">
+          <div class="brand-lockup">
+            <div class="brand">
+              <span class="brand-mark">B</span>
+              <span>Bitstacken AB</span>
+            </div>
+          </div>
+          <a class="mail-link js-email" href="/" aria-label="Email Bitstacken">Contact</a>
+        </header>
+
+        <section class="stage">
+          <div class="copy">
+            <p class="eyebrow">Senior technical consulting</p>
+            <h1>
+              Bitstacken provides technical guidance as well as practical delivery, with
+              focus on stability and security.
+            </h1>
+
+            <div class="points" aria-label="Core services">
+              <span>Websites</span>
+              <span>Apps</span>
+              <span>Architecture</span>
+              <span>Automation</span>
+              <span>AI</span>
+            </div>
+
+            <div class="actions">
+              <a class="button button-primary js-email" href="/">Get in touch</a>
+              <a
+                class="button button-secondary"
+                href="https://pansarpost.se/"
+                target="_blank"
+                rel="noreferrer"
+                >See PansarPost</a
+              >
+            </div>
+          </div>
+
+          <aside class="rail" aria-label="Company summary">
+            <div class="proof-list">
+              <div class="fact">
+                <strong>Since 2013</strong>
+                <span>Experience across software development, product work, and technical delivery</span>
+              </div>
+              <div class="fact">
+                <strong>Since 2020</strong>
+                <span>Consulting across architecture, delivery, and practical technical problem-solving</span>
+              </div>
+              <div class="fact">
+                <strong>End-to-end ownership</strong>
+                <span>We fully build and operate PansarPost, and bring that same production discipline to client systems</span>
+              </div>
+            </div>
+
+            <div class="product-callout">
+              <p class="product-label">Product</p>
+              <p class="note">
+                <a href="https://pansarpost.se/" target="_blank" rel="noreferrer">PansarPost</a>
+                is our secure email service, fully built and operated by Bitstacken. It reflects how we work: practical delivery, stable systems, and security where it matters.
+              </p>
+            </div>
+          </aside>
+        </section>
+      </div>
+    </main>
+    <script>
+      const decode = (values, shift) =>
+        values.map((value) => String.fromCharCode(value - shift)).join("");
+
+      const user = decode([110, 115, 107, 116], 5);
+      const domain = [decode([104, 111, 122, 121, 122, 103, 105, 113, 107, 116], 6), decode([120, 106], 5)].join(".");
+      const address = [user, domain].join("@");
+
+      for (const link of document.querySelectorAll(".js-email")) {
+        link.href = `mailto:${address}`;
+      }
+    </script>
+  </body>
+</html>
