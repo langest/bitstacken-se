@@ -8,6 +8,23 @@
       name="description"
       content="Bitstacken AB provides practical IT consulting, websites, apps, and technical support for businesses."
     />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+    <meta name="theme-color" content="#fcfaf4" />
+    <link rel="canonical" href="https://bitstacken.se/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Bitstacken AB | IT Consulting" />
+    <meta
+      property="og:description"
+      content="Bitstacken AB provides practical IT consulting, websites, apps, and technical support for businesses."
+    />
+    <meta property="og:url" content="https://bitstacken.se/" />
+    <meta property="og:site_name" content="Bitstacken AB" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Bitstacken AB | IT Consulting" />
+    <meta
+      name="twitter:description"
+      content="Bitstacken AB provides practical IT consulting, websites, apps, and technical support for businesses."
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,35 +33,45 @@
     />
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Bitstacken AB",
+        "url": "https://bitstacken.se/",
+        "description": "Bitstacken AB provides practical IT consulting, websites, apps, and technical support for businesses."
+      }
+    </script>
   </head>
   <body>
-    <main class="shell">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <main class="shell" id="main-content">
       <div class="frame">
         <header class="masthead">
           <div class="brand-lockup">
             <div class="brand">
-              <span class="brand-mark">B</span>
+              <span class="brand-mark" aria-hidden="true">B</span>
               <span>Bitstacken AB</span>
             </div>
           </div>
           <a class="mail-link js-email" href="/" aria-label="Email Bitstacken">Contact</a>
         </header>
 
-        <section class="stage">
+        <section class="stage" aria-labelledby="site-title">
           <div class="copy">
             <p class="eyebrow">Senior technical consulting</p>
-            <h1>
+            <h1 id="site-title">
               Bitstacken provides technical guidance as well as practical delivery, with
               focus on stability and security.
             </h1>
 
-            <div class="points" aria-label="Core services">
-              <span>Websites</span>
-              <span>Apps</span>
-              <span>Architecture</span>
-              <span>Automation</span>
-              <span>AI</span>
-            </div>
+            <ul class="points" aria-label="Core services">
+              <li>Websites</li>
+              <li>Apps</li>
+              <li>Architecture</li>
+              <li>Automation</li>
+              <li>AI</li>
+            </ul>
 
             <div class="actions">
               <a class="button button-primary js-email" href="/">Get in touch</a>
@@ -52,32 +79,39 @@
                 class="button button-secondary"
                 href="https://pansarpost.se/"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
+                aria-label="See PansarPost, opens in a new tab"
                 >See PansarPost</a
               >
             </div>
           </div>
 
           <aside class="rail" aria-label="Company summary">
-            <div class="proof-list">
+            <dl class="proof-list">
               <div class="fact">
-                <strong>Since 2013</strong>
-                <span>Experience across software development, product work, and technical delivery</span>
+                <dt><strong>Since 2013</strong></dt>
+                <dd>Experience across software development, product work, and technical delivery</dd>
               </div>
               <div class="fact">
-                <strong>Since 2020</strong>
-                <span>Consulting across architecture, delivery, and practical technical problem-solving</span>
+                <dt><strong>Since 2020</strong></dt>
+                <dd>Consulting across architecture, delivery, and practical technical problem-solving</dd>
               </div>
               <div class="fact">
-                <strong>End-to-end ownership</strong>
-                <span>We fully build and operate PansarPost, and bring that same production discipline to client systems</span>
+                <dt><strong>End-to-end ownership</strong></dt>
+                <dd>We fully build and operate PansarPost, and bring that same production discipline to client systems</dd>
               </div>
-            </div>
+            </dl>
 
             <div class="product-callout">
               <p class="product-label">Product</p>
               <p class="note">
-                <a href="https://pansarpost.se/" target="_blank" rel="noreferrer">PansarPost</a>
+                <a
+                  href="https://pansarpost.se/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="PansarPost, opens in a new tab"
+                  >PansarPost</a
+                >
                 is our secure email service, fully built and operated by Bitstacken. It reflects how we work: practical delivery, stable systems, and security where it matters.
               </p>
             </div>
@@ -90,7 +124,10 @@
         values.map((value) => String.fromCharCode(value - shift)).join("");
 
       const user = decode([110, 115, 107, 116], 5);
-      const domain = [decode([104, 111, 122, 121, 122, 103, 105, 113, 107, 116], 6), decode([120, 106], 5)].join(".");
+      const domain = [
+        decode([104, 111, 122, 121, 122, 103, 105, 113, 107, 116], 6),
+        decode([120, 106], 5),
+      ].join(".");
       const address = [user, domain].join("@");
 
       for (const link of document.querySelectorAll(".js-email")) {
