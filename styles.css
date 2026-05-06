@@ -56,23 +56,6 @@ a:focus-visible {
   outline-offset: 4px;
 }
 
-.skip-link {
-  position: absolute;
-  left: 16px;
-  top: 16px;
-  padding: 10px 14px;
-  border-radius: 12px;
-  background: var(--accent-strong);
-  color: #fff;
-  transform: translateY(-160%);
-  transition: transform 160ms ease;
-  z-index: 10;
-}
-
-.skip-link:focus-visible {
-  transform: translateY(0);
-}
-
 .shell {
   width: min(1120px, calc(100% - 32px));
   min-height: 100svh;
